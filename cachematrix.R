@@ -1,9 +1,9 @@
-## These functions are intended to speed up the computation of matrix inversions
-## by minimizing the number of times the matrix inversion is computed
-## They take advantage of an R function capability to assign values outside of it's 
+## This pair of functions is intended to speed up the computation of matrix operations
+## by minimizing the number of times the actual matrix inversion is computed.
+## It takes advantage of an R function's ability to assign values outside of its 
 ## calling environment.
-## The function makeCacheMatix() generates a special matrix that can cache its inverse
 
+## The function makeCacheMatix() generates a special matrix that can cache its inverse
 makeCacheMatrix <- function(x = matrix()) {
 
     #set variable x (matrix in this case) to NULL
@@ -51,5 +51,3 @@ cacheSolve <- function(x, ...) {
     	return(x)
     	}
 }
-
-
